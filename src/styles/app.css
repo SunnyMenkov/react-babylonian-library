@@ -1,0 +1,106 @@
+main {
+  display: grid;
+  min-height: calc(100vh - 48px);
+  place-items: center;
+  padding: 48px 24px;
+  background-image:
+    linear-gradient(rgba(18, 19, 26, 0.45), rgba(18, 19, 26, 0.7)),
+    url("https://cdn-s-static.arzamas.academy/uploads/ckeditor/pictures/22289/content_tower.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content-card {
+  width: min(100%, 720px);
+  padding: clamp(24px, 5vw, 48px);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 16px;
+  background: rgba(20, 21, 28, 0.78);
+  color: #fff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(8px);
+}
+
+.content-card h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+.about-card h2 {
+  margin: 32px 0 12px;
+}
+
+.about-card p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.not-found-description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.about-card a,
+.home-link {
+  color: #f3cf92;
+}
+
+.about-card code {
+  border-radius: 4px;
+  padding: 2px 5px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 0.9em;
+}
+
+.generated-text {
+  min-height: 7em;
+  margin: 28px 0;
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.generated-text p {
+  margin: 0;
+}
+
+.error-message {
+  color: #ffb4a9;
+}
+
+.refresh-button {
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 18px;
+  background: #e9bd73;
+  color: #241d14;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.refresh-button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.refresh-button:hover {
+  background: #f3cf92;
+  transform: translateY(-1px);
+}
+
+.refresh-button:disabled:hover {
+  background: #e9bd73;
+  transform: none;
+}
+
+.refresh-button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .refresh-button {
+    transition: none;
+  }
+}
